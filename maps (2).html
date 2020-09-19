@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+   
+  <head>
+    <title>FBO One</title>
+
+   <style>html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+#map {
+width:100px;
+  height: 100px;
+}</style>
+
+     </head>
+     
+  <body>
+      
+  <script>function initMap() {
+  var map = new google.maps.Map(document.getElementById('map'), {
+    zoom: 11,
+    mapTypeId: 'satellite',
+     disableDefaultUI: false,
+     streetViewControl: false,
+     mapTypeControl: false,
+    center: {
+      lat: 41.876,
+      lng: -87.624
+    }
+  });
+
+  var ctaLayer = new google.maps.KmlLayer({
+    url: 'http://www.google.com/maps/d/kml?mid=1P7dtbhaFM7QJ_Ux0wVi2s-fzaxpuNUW2',
+    map: map
+  });
+}</script>
+  
+  
+  
+<div id="map"></div>
+<!-- add your own API key. -->
+<script async defer src="https://maps.googleapis.com/maps/api/js?callback=initMap&key=AIzaSyDmw3WgSj7lCUEt9sA_hJdvwmLXzdC02CA">
+</script>
+  </body>
+</html>
